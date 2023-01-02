@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t mthanasides/docker-react2 -f Dockerfile.dev .
+  - docker build -t mikethan/docker-react2 -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true mthanasides/docker-react npm run test
+  - docker run -e CI=true mikethan/docker-react npm run test
 
 deploy:
   provider: elasticbeanstalk
